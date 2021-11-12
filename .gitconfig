@@ -1,0 +1,28 @@
+[user]
+	name = JJ
+	email = jhinerdev@gmail.com
+[color]
+  status = auto
+  diff = auto
+  branch = auto
+  interactive = auto
+  grep = auto
+  ui = auto
+[alias]
+  a = "!git status --short | peco | awk '{print $2}' | xargs git add"
+  ac = "!git add . && git commit -a -m"
+  d = diff
+  co = checkout
+  cd = "!git checkout development && git pull origin development"
+  ci = commit
+  ca = commit -a
+  ps = "!git push origin $(git rev-parse --abbrev-ref HEAD)"
+  pl = "!git pull origin $(git rev-parse --abbrev-ref HEAD)"
+  st = status
+  bn = checkout -b
+  br = branch
+  ba = branch -a
+  bd = branch -d
+  bm = branch --merged
+  hist = log --pretty=format:\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)\" --graph --date=relative --decorate --all
+  llog = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
