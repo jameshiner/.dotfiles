@@ -1,0 +1,7 @@
+caps lock => control
+control => command
+function => control
+
+alfred keybind
+control-space
+
