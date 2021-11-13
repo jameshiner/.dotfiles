@@ -1,7 +1,16 @@
-caps lock => control
-control => command
-function => control
+osx
+  set function keys to be default
+  caps lock => control
+  control => command
+  function => control
 
-alfred keybind
-control-space
+alfred
+  set keybind to control-space
 
+iterm2
+  set font
+  set font size
+  set colorscheme
+
+nvim
+  

@@ -6,11 +6,13 @@ chflags nohidden ~/Library
 defaults write com.apple.finder AppleShowAllFiles YES
 defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
+defaults write com.apple.dock static-only -bool true;
 
 # Install Homebrew
 if test ! $(which brew); then
     echo "Installing homebrew..."
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+		export PATH=/opt/homebrew/bin:$PATH
 fi
 
 # Update homebrew recipes
@@ -73,6 +75,10 @@ chsh -s /bin/zsh
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
+# Install vim-plug
+echo "Installing vim-plug"
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 echo "Installing global npm packages..."
 npm i -g prettier
@@ -95,10 +101,10 @@ for i in  ${DOTFILES[@]}; do
 done
 
 mkdir -p ~/scripts/
-ln -s ~/.dotfiles/scripts/ ~/scripts/
+for FILE in ./scripts; do cp $FILE ~/scripts/; done
 
 mkdir -p ~/.config/
-cp -R ./.config/karabiner ~/.config/
+for FILE in ./config; do cp -R $FILE ~/.config/; done
 
 open /Applications/Alfred\ 4.app
 open /Applications/Karabiner-Elements.app
