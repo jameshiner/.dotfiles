@@ -1,5 +1,6 @@
 osx
   set function keys to be default
+  key repeat
   caps lock => control
   control => command
   function => control
@@ -8,9 +9,17 @@ alfred
   set keybind to control-space
 
 iterm2
-  set font
-  set font size
-  set colorscheme
+  profile
+    text
+      set font
+      set font size
+    colors
+      set colorscheme
+    terminal
+      silence bell
 
 nvim
+  run PlugInstall in init.vim
+  js/ts autocompletion - run 
+    CocInstall coc-rome coc-tsserver
   

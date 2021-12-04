@@ -12,6 +12,7 @@
   a = "!git status --short | peco | awk '{print $2}' | xargs git add"
   ac = "!git add . && git commit -a -m"
   d = diff
+	c = commit -a -m
   co = checkout
   cd = "!git checkout development && git pull origin development"
   ci = commit

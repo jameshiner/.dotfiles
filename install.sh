@@ -83,6 +83,8 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 echo "Installing global npm packages..."
 npm i -g prettier
 npm i -g eslint
+npm i -g eslint-plugin-react
+npm i -g eslint-config-airbnb
 
 DOTFILES=(
 	.tmux.conf
@@ -93,6 +95,7 @@ DOTFILES=(
 	.prettierrc
 	.prettierignore
 	.nanorc
+	.eslintrc.json
 )
 
 echo "Creating sym links..."

@@ -98,6 +98,7 @@ alias ls="ls -G"
 alias la="ls -A"
 alias ll="la -l"
 alias g=git
+alias tc="clear && tmux clear-history"
 alias reload="source ~/.zshrc"
 alias weather="curl wttr.in/"
 alias weatherhelp="curl wttr.in/:help"
