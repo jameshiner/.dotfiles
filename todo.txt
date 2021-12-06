@@ -1,12 +1,32 @@
+open apps
+  alfred
+  rectangle
+  karabiner elements
+
 osx
   set function keys to be default
-  key repeat
-  caps lock => control
-  control => command
-  function => control
+    preferences -> keyboard -> keyboard
+  change modifier keys  
+    preferences -> keyboard -> keyboard -> modifier keys
+      caps lock => control
+      control => command
+
+  spotlight
+    remove command space keybind
+    preferences -> spotlight -> keyboard shortcuts
+
+  dock
+    preferences -> dock & menu bar
+      size -> small
+      magnification -> max
+      position -> left
+      automatically hide -> checked
+
+  add startup programs
+    preferences -> users & groups -> login items
 
 alfred
-  set keybind to control-space
+  set keybind to command-space
 
 iterm2
   profile
@@ -23,3 +43,29 @@ nvim
   js/ts autocompletion - run 
     CocInstall coc-rome coc-tsserver
   
+github
+
+  create 2 ssh keys (name files accordingly)
+    ssh-keygen -t rsa -b 4096 -C "<your email address>"
+
+  add keys to github accounts under account settings -> ssh keys
+
+  start ssh agent/check if started
+    eval "$(ssh-agent -s)"
+
+  create ssh config
+    touch ~/.ssh/config
+
+    add:
+
+      # Default GitHub
+      Host github.com
+        HostName github.com
+        User git
+        IdentityFile ~/.ssh/id_rsa
+
+      # work (use git@github-work instead of git@github.com)
+      Host github-work
+        HostName github.com
+        User git
+        IdentityFile ~/.ssh/wellsky

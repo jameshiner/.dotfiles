@@ -3,10 +3,11 @@
 # Set Mac Defaults
 echo "Setting MacOS defaults"
 chflags nohidden ~/Library
-defaults write com.apple.finder AppleShowAllFiles YES
+defaults write com.apple.Finder AppleShowAllFiles true
 defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
-defaults write com.apple.dock static-only -bool true;
+defaults write com.apple.dock static-only -bool true
+defaults write -g ApplePressAndHoldEnabled -bool false
 
 # Install Homebrew
 if test ! $(which brew); then
@@ -39,6 +40,8 @@ CASKS=(
 	bitwarden
 	alfred
 	discord
+	slack
+	microsoft-teams
 	visual-studio-code
 	google-chrome
 	firefox
@@ -47,7 +50,7 @@ CASKS=(
 	parallels
 	rectangle
 	karabiner-elements
-	hyperswitch
+	# hyperswitch
 )
 
 echo "Installing casks..."
@@ -83,8 +86,18 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 echo "Installing global npm packages..."
 npm i -g prettier
 npm i -g eslint
-npm i -g eslint-plugin-react
 npm i -g eslint-config-airbnb
+npm i -g eslint-plugin-react
+npm i -g eslint-plugin-import
+npm i -g eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks
+
+# to get airbnb to work globally
+npm install -g install-peerdeps
+install-peerdeps --dev eslint-config-airbnb-base
+
+echo "Installing node 16.X.X ..."
+nvm install 16
+nvm alias default 16
 
 DOTFILES=(
 	.tmux.conf
@@ -109,7 +122,4 @@ for FILE in ./scripts; do cp $FILE ~/scripts/; done
 mkdir -p ~/.config/
 for FILE in ./config; do cp -R $FILE ~/.config/; done
 
-open /Applications/Alfred\ 4.app
-open /Applications/Karabiner-Elements.app
-open /Applications/Rectangle.app
-open /Applications/HyperSwitch.app
+

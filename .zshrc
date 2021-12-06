@@ -57,7 +57,6 @@ plugins=(
     z
     colored-man-pages
     colorize
-    zsh-autosuggestions
     zsh-syntax-highlighting
 )
 
