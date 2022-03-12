@@ -112,6 +112,10 @@ alias py="python3"
 alias python="python3"
 alias vim="nvim"
 
+alias sar="sencha app refresh"
+alias sabdd="sencha app build desktop development"
+alias sabdp="sencha app build desktop production"
+
 mkcd() { mkdir "$1" && cd "$1"; }
 # ls after cd
 function cd {

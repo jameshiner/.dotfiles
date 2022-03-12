@@ -25,6 +25,10 @@ osx
   add startup programs
     preferences -> users & groups -> login items
 
+	trackpad
+		preferences -> trackpad
+			tap to click -> checked
+
 alfred
   set keybind to command-space
 
@@ -49,6 +53,7 @@ github
     ssh-keygen -t rsa -b 4096 -C "<your email address>"
 
   add keys to github accounts under account settings -> ssh keys
+  for work, click the authorize sso button
 
   start ssh agent/check if started
     eval "$(ssh-agent -s)"

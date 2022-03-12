@@ -41,7 +41,7 @@ CASKS=(
 	alfred
 	discord
 	slack
-	microsoft-teams
+	# microsoft-teams
 	visual-studio-code
 	google-chrome
 	firefox
@@ -50,6 +50,8 @@ CASKS=(
 	parallels
 	rectangle
 	karabiner-elements
+	spotify
+	postman
 	# hyperswitch
 )
 
@@ -85,6 +87,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 echo "Installing global npm packages..."
 npm i -g prettier
+npm i -g yarn
 npm i -g eslint
 npm i -g eslint-config-airbnb
 npm i -g eslint-plugin-react
