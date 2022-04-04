@@ -40,8 +40,6 @@ CASKS=(
 	bitwarden
 	alfred
 	discord
-	slack
-	# microsoft-teams
 	visual-studio-code
 	google-chrome
 	firefox
@@ -52,7 +50,6 @@ CASKS=(
 	karabiner-elements
 	spotify
 	postman
-	# hyperswitch
 )
 
 echo "Installing casks..."
