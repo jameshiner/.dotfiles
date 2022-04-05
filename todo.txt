@@ -6,7 +6,7 @@ open apps
 osx
   set function keys to be default
     preferences -> keyboard -> keyboard
-  change modifier keys  
+  change modifier keys
     preferences -> keyboard -> keyboard -> modifier keys
       caps lock => control
       control => command
@@ -33,22 +33,14 @@ alfred
   set keybind to command-space
 
 iterm2
-  profile
-    text
-      set font
-      set font size
-    colors
-      set colorscheme
-    terminal
-      silence bell
+  import ./itermProfile.json
 
 nvim
   run PlugInstall in init.vim
-  js/ts autocompletion - run 
+  js/ts autocompletion - run
     CocInstall coc-rome coc-tsserver
-  
-github
 
+github
   create 2 ssh keys (name files accordingly)
     ssh-keygen -t rsa -b 4096 -C "<your email address>"
 
@@ -62,7 +54,6 @@ github
     touch ~/.ssh/config
 
     add:
-
       # Default GitHub
       Host github.com
         HostName github.com
