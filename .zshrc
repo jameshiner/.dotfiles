@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/jj/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # nvm setup
 export NVM_DIR="$HOME/.nvm"
@@ -14,7 +14,7 @@ export NVM_DIR="$HOME/.nvm"
 # ZSH_THEME="agnoster"
 # ZSH_THEME="awesomepanda"
 # ZSH_THEME="afowler"
-ZSH_THEME="sorin"
+# ZSH_THEME="sorin"
 # ZSH_THEME="gentoo"
 # ZSH_THEME="jispwoso"
 
@@ -58,9 +58,19 @@ plugins=(
     colored-man-pages
     colorize
     zsh-syntax-highlighting
+    rvm
+    nvm
 )
 
 source $ZSH/oh-my-zsh.sh
+
+autoload -U promptinit; promptinit
+
+# Load Pure Prompt
+prompt pure
+zstyle :prompt:pure:path color 'cyan'
+zstyle :prompt:pure:git:branch color 'magenta'
+zstyle ':prompt:pure:prompt:*' color 'white'
 
 # User configuration
 
@@ -92,6 +102,7 @@ alias ide="sh ~/scripts/ide.sh"
 alias home='cd ~'
 alias h=home
 alias hi=history
+alias c=clear
 alias u="cd .."
 alias ls="ls -G"
 alias la="ls -A"
@@ -99,22 +110,27 @@ alias ll="la -l"
 alias g=git
 alias tc="clear && tmux clear-history"
 alias reload="source ~/.zshrc"
-alias weather="curl wttr.in/"
-alias weatherhelp="curl wttr.in/:help"
 alias pls='sudo $(fc -ln -1)'
+alias plz='sudo $(fc -ln -1)'
 alias nginx-restart='sudo nginx -s stop && sudo nginx'
 alias nginx-stop='sudo nginx -s stop'
 alias nano='/opt/homebrew/bin/nano/'
-alias dev='cd ~/Documents/code/'
 alias mkdir="mkdir -pv"
 alias nano="nano -l"
 alias py="python3"
 alias python="python3"
 alias vim="nvim"
+alias weather="curl wttr.in/"
+alias weatherhelp="curl wttr.in/:help"
 
-alias sar="sencha app refresh"
-alias sabdd="sencha app build desktop development"
-alias sabdp="sencha app build desktop production"
+# wellsky
+# alias sar="sencha app refresh"
+# alias sabdd="sencha app build desktop development"
+# alias sabdp="sencha app build desktop production"
+
+# square
+alias dev='cd ~/Development/dashboard/frontend/dashboard/'
+alias sdev="cd ~/Development/dashboard/frontend/dashboard/ && source env/bin/activate && yarn start"
 
 mkcd() { mkdir "$1" && cd "$1"; }
 # ls after cd
@@ -128,3 +144,6 @@ function cd {
         ls
     fi
 }
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

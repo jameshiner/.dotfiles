@@ -31,6 +31,7 @@ PACKAGES=(
 	nano
 	commitizen
 	nginx
+	pure
 )
 
 echo "Installing packages..."
