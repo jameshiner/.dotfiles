@@ -4,6 +4,9 @@ open apps
   karabiner elements
 
 osx
+  mission control
+    uncheck automatically rearrange spaces based on most recent use
+
   set function keys to be default
     preferences -> keyboard -> keyboard
   change modifier keys
@@ -39,6 +42,9 @@ nvim
   run PlugInstall in init.vim
   js/ts autocompletion - run
     CocInstall coc-rome coc-tsserver
+
+scroll reverser
+  reverse mouse scrolling if not using magic mouse
 
 github
   create 2 ssh keys (name files accordingly)

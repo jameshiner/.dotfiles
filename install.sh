@@ -51,6 +51,7 @@ CASKS=(
 	karabiner-elements
 	spotify
 	postman
+	scroll-reverser
 )
 
 echo "Installing casks..."
