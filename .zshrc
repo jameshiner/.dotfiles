@@ -129,8 +129,13 @@ alias weatherhelp="curl wttr.in/:help"
 # alias sabdp="sencha app build desktop production"
 
 # square
-alias dev='cd ~/Development/dashboard/frontend/dashboard/'
-alias sdev="cd ~/Development/dashboard/frontend/dashboard/ && source env/bin/activate && yarn start"
+alias activate="source ~/Development/dashboard/frontend/dashboard/env/bin/activate"
+alias dev="cd ~/Development/dashboard/frontend/dashboard/"
+alias devs="activate && cd ~/Development/dashboard/frontend/dashboard/ && yarn start"
+alias devd="cd ~/Development/dashboard/frontend/@dashboard/rst-ui"
+alias devds="activate && cd ~/Development/dashboard/frontend/@dashboard/rst-ui && yarn start"
+
+alias egc="ember generate component -gc"
 
 mkcd() { mkdir "$1" && cd "$1"; }
 # ls after cd
