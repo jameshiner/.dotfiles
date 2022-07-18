@@ -6,8 +6,12 @@ chflags nohidden ~/Library
 defaults write com.apple.Finder AppleShowAllFiles true
 defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
-defaults write com.apple.dock static-only -bool true
 defaults write -g ApplePressAndHoldEnabled -bool false
+defaults write com.apple.dock static-only -bool true
+defaults write com.apple.dock autohide-delay -float 0;
+defaults write com.apple.dock autohide-time-modifier -int 0
+defaults write com.apple.dock showhidden -bool TRUE
+killall Dock
 
 # Install Homebrew
 if test ! $(which brew); then
