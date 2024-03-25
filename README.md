@@ -22,7 +22,8 @@ uncheck Show Spotlight search
 
 **preferences &rarr; keyboard &rarr;**\
 Key Repeat Rate &rarr; Fast\
-Delay until repeat &rarr; Short
+Delay until repeat &rarr; Short\
+Press Globe Key to  &rarr; Do nothing
 
 **keyboard shortcuts.. &rarr;**\
 &nbsp;&nbsp;&nbsp;&nbsp;**Function Keys**\
