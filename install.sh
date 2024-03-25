@@ -87,6 +87,8 @@ CASKS=(
 	scroll-reverser
 	notion
 	ticktick
+ 	stats
+  	hiddenbar
 )
 
 echo "Installing casks..."
