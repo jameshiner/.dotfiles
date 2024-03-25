@@ -61,7 +61,6 @@ CASKS=(
 	firefox
 	iterm2
 	slack
-	parallels
 	rectangle
 	karabiner-elements
 	spotify
