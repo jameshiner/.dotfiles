@@ -1,34 +1,43 @@
 # .dotfiles
 
-### open apps
+## install
+
+`git clone https://github.com/jameshiner/.dotfiles.git && cd .dotfiles`\
+`./install.sh`
+
+## spotlight
+
+remove <kbd>Cmd</kbd> + <kbd>Space</kbd> keybind\
+preferences &rarr; spotlight &rarr; keyboard shortcuts\
+uncheck Show Spotlight search
+
+## open apps
 
 - alfred
+  - set keybind to <kbd>Cmd</kbd> + <kbd>Space</kbd>
 - rectangle
-- karabiner elements
+- karabiner-elements
 
-### set function keys to be default
+## keyboard
 
-preferences &rarr; keyboard &rarr; keyboard
-change modifier keys\
-preferences &rarr; keyboard &rarr; keyboard &rarr; modifier keys\
-caps lock &rArr; control\
-control &rArr; command
+**preferences &rarr; keyboard &rarr;**\
+Key Repeat Rate &rarr; Fast\
+Delay until repeat &rarr; Short
 
-### spotlight
+**keyboard shortcuts.. &rarr;**\
+&nbsp;&nbsp;&nbsp;&nbsp;**Function Keys**\
+&nbsp;&nbsp;&nbsp;&nbsp;_Use Standard_ &rArr; checked
 
-remove command space keybind\
-preferences &rarr; spotlight &rarr; keyboard shortcuts\
-uncheck _Show Spotlight search_
+&nbsp;&nbsp;&nbsp;&nbsp;**Modifier Keys**\
+&nbsp;&nbsp;&nbsp;&nbsp;caps lock &rArr; control\
+&nbsp;&nbsp;&nbsp;&nbsp;control &rArr; command
 
-### dock
+## dock
 
-preferences &rarr; dock & menu bar\
-size &rarr; small\
-magnification &rarr; max\
-position &rarr; left\
-check _Automatically hide and show the Dock_
+**preferences &rarr; desktop & dock**\
+_Automatically hide and show the Dock_ &rArr; checked
 
-### add startup programs
+## add startup programs
 
 preferences &rarr; users & groups &rarr; login items
 
@@ -36,17 +45,7 @@ preferences &rarr; users & groups &rarr; login items
 - karabiner elements
 - rectangle
 
-### other
-
-mission control\
-uncheck _Automatically rearrange Spaces based on most recent use_
-
-trackpad\
-preferences &rarr; trackpad\
-tap to click &rarr; checked
-
-alfred\
-set keybind to <kbd>Cmd</kbd> + <kbd>Space</kbd>
+## other
 
 iterm2\
 import ./itermProfile.json

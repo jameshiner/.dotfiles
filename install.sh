@@ -10,7 +10,18 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 defaults write com.apple.dock static-only -bool true
 defaults write com.apple.dock autohide-delay -float 0;
 defaults write com.apple.dock autohide-time-modifier -int 0
-defaults write com.apple.dock showhidden -bool TRUE
+defaults write com.apple.dock showhidden -bool true
+defaults write com.apple.dock tilesize -int 16
+defaults write com.apple.dock orientation left
+
+defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
+
+# tap to click
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+/System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+
+# restart dock
 killall Dock
 
 # Install Homebrew
@@ -56,6 +67,8 @@ CASKS=(
 	spotify
 	postman
 	scroll-reverser
+	notion
+	ticktick
 )
 
 echo "Installing casks..."
@@ -118,7 +131,7 @@ DOTFILES=(
 )
 
 echo "Creating sym links..."
-for i in  ${DOTFILES[@]}; do
+for i in ${DOTFILES[@]}; do
   ln -s ~/.dotfiles/$i ~/$i
 done
 

@@ -129,16 +129,15 @@ alias weatherhelp="curl wttr.in/:help"
 # alias sabdp="sencha app build desktop production"
 
 # square
-alias activate="source ~/Development/dashboard/frontend/dashboard/env/bin/activate"
-alias dev="cd ~/Development/dashboard/frontend/dashboard/"
-alias devs="activate && cd ~/Development/dashboard/frontend/dashboard/ && yarn start"
-alias devd="cd ~/Development/dashboard/frontend/@dashboard/rst-ui"
-alias devds="activate && cd ~/Development/dashboard/frontend/@dashboard/rst-ui && yarn start"
+# alias activate="source ~/Development/dashboard/frontend/dashboard/env/bin/activate"
+# alias dev="cd ~/Development/dashboard/frontend/dashboard/"
+# alias devs="activate && cd ~/Development/dashboard/frontend/dashboard/ && yarn start"
+# alias devd="cd ~/Development/dashboard/frontend/@dashboard/rst-ui"
+# alias devds="activate && cd ~/Development/dashboard/frontend/@dashboard/rst-ui && yarn start"
+# alias egc="ember generate component -gc"
 
-alias egc="ember generate component -gc"
-
-mkcd() { mkdir "$1" && cd "$1"; }
 # ls after cd
+mkcd() { mkdir "$1" && cd "$1"; }
 function cd {
     if [ -z "$1" ]; then
         builtin cd
